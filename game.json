@@ -1,0 +1,18 @@
+{
+ "name": "game-4",
+ "title": "像素冒险",
+ "genre": "platformer",
+ "theme": "横版像素平台跳跃：一名小勇士穿越草原与深坑，踩踏敌人、收集金币、抵达终点旗帜",
+ "style": "snes16",
+ "canvas": [
+  640,
+  360
+ ],
+ "tile": 16,
+ "camera": "side",
+ "controls": "keyboard",
+ "orientation": "landscape",
+ "palette": 32,
+ "anim_fps": 10,
+ "art_notes": "同画布同锚点；动画帧用固定 seed + 极小提示词差异保证连续"
+}

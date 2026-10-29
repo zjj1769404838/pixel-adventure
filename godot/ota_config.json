@@ -1,0 +1,8 @@
+{
+  "manifest_url": "",
+  "install_authority": "com.pixelstudio.pixeladventure.fileprovider",
+  "check_on_start": true,
+  "timeout_sec": 10.0,
+  "game_name": "像素冒险",
+  "package_name": "com.pixelstudio.pixeladventure"
+}

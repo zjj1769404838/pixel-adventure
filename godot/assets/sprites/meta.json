@@ -1,0 +1,702 @@
+{
+ "hero": {
+  "layer": "L1",
+  "kind": "sprite",
+  "size": [
+   32,
+   32
+  ],
+  "frames": 4,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": true,
+  "bg": "white",
+  "frames_meta": [
+   {
+    "file": "hero_f0.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 96.5,
+    "colors": 28
+   },
+   {
+    "file": "hero_f1.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 118.3,
+    "colors": 33,
+    "changed_px": 425
+   },
+   {
+    "file": "hero_f2.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 98.2,
+    "colors": 31,
+    "changed_px": 400
+   },
+   {
+    "file": "hero_f3.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 120.8,
+    "colors": 33,
+    "changed_px": 392
+   }
+  ],
+  "anchors": [
+   {
+    "ground_y": 615,
+    "root_x": 256.15,
+    "shift": [
+     -21,
+     36
+    ],
+    "canvas_ground_y": 31,
+    "canvas_root_x": 16,
+    "paste": [
+     5,
+     3
+    ]
+   },
+   {
+    "ground_y": 687,
+    "root_x": 225.86,
+    "shift": [
+     9,
+     -36
+    ],
+    "canvas_ground_y": 31,
+    "canvas_root_x": 16,
+    "paste": [
+     6,
+     -1
+    ]
+   },
+   {
+    "ground_y": 604,
+    "root_x": 244.16,
+    "shift": [
+     -9,
+     47
+    ],
+    "canvas_ground_y": 31,
+    "canvas_root_x": 16,
+    "paste": [
+     5,
+     3
+    ]
+   },
+   {
+    "ground_y": 690,
+    "root_x": 220.07,
+    "shift": [
+     15,
+     -39
+    ],
+    "canvas_ground_y": 31,
+    "canvas_root_x": 16,
+    "paste": [
+     6,
+     -1
+    ]
+   }
+  ]
+ },
+ "hero_jump": {
+  "layer": "L1",
+  "kind": "sprite",
+  "size": [
+   32,
+   32
+  ],
+  "frames": 2,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": true,
+  "bg": "white",
+  "frames_meta": [
+   {
+    "file": "hero_jump_f0.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 106.7,
+    "colors": 31
+   },
+   {
+    "file": "hero_jump_f1.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 95.2,
+    "colors": 31,
+    "changed_px": 317
+   }
+  ],
+  "anchors": [
+   {
+    "ground_y": 601,
+    "root_x": 151.35,
+    "shift": [
+     6,
+     -18
+    ],
+    "canvas_ground_y": 31,
+    "canvas_root_x": 16,
+    "paste": [
+     8,
+     -2
+    ]
+   },
+   {
+    "ground_y": 566,
+    "root_x": 163.06,
+    "shift": [
+     -6,
+     17
+    ],
+    "canvas_ground_y": 31,
+    "canvas_root_x": 16,
+    "paste": [
+     8,
+     0
+    ]
+   }
+  ]
+ },
+ "enemy_grunt": {
+  "layer": "L1",
+  "kind": "sprite",
+  "size": [
+   32,
+   32
+  ],
+  "frames": 2,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": true,
+  "bg": "white",
+  "frames_meta": [
+   {
+    "file": "enemy_grunt_f0.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 105.6,
+    "colors": 30
+   },
+   {
+    "file": "enemy_grunt_f1.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 109.1,
+    "colors": 27,
+    "changed_px": 160
+   }
+  ],
+  "anchors": [
+   {
+    "ground_y": 624,
+    "root_x": 244.37,
+    "shift": [
+     1,
+     2
+    ],
+    "canvas_ground_y": 31,
+    "canvas_root_x": 16,
+    "paste": [
+     4,
+     0
+    ]
+   },
+   {
+    "ground_y": 628,
+    "root_x": 245.76,
+    "shift": [
+     -1,
+     -2
+    ],
+    "canvas_ground_y": 31,
+    "canvas_root_x": 16,
+    "paste": [
+     4,
+     0
+    ]
+   }
+  ]
+ },
+ "enemy_flyer": {
+  "layer": "L1",
+  "kind": "sprite",
+  "size": [
+   32,
+   32
+  ],
+  "frames": 2,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": true,
+  "bg": "white",
+  "frames_meta": [
+   {
+    "file": "enemy_flyer_f0.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 136.3,
+    "colors": 30
+   },
+   {
+    "file": "enemy_flyer_f1.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 137.4,
+    "colors": 26,
+    "changed_px": 55
+   }
+  ],
+  "anchors": [
+   {
+    "ground_y": 518,
+    "root_x": 451.53,
+    "shift": [
+     0,
+     0
+    ],
+    "canvas_ground_y": 30,
+    "canvas_root_x": 16,
+    "paste": [
+     0,
+     12
+    ]
+   },
+   {
+    "ground_y": 518,
+    "root_x": 451.61,
+    "shift": [
+     0,
+     0
+    ],
+    "canvas_ground_y": 30,
+    "canvas_root_x": 16,
+    "paste": [
+     0,
+     12
+    ]
+   }
+  ]
+ },
+ "pickup_coin": {
+  "layer": "L4",
+  "kind": "pickup",
+  "size": [
+   16,
+   16
+  ],
+  "frames": 4,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": true,
+  "bg": "white",
+  "frames_meta": [
+   {
+    "file": "pickup_coin_f0.png",
+    "size": [
+     16,
+     16
+    ],
+    "opaque_rgb_mean": 151.9,
+    "colors": 25
+   },
+   {
+    "file": "pickup_coin_f1.png",
+    "size": [
+     16,
+     16
+    ],
+    "opaque_rgb_mean": 137.1,
+    "colors": 26,
+    "changed_px": 155
+   },
+   {
+    "file": "pickup_coin_f2.png",
+    "size": [
+     16,
+     16
+    ],
+    "opaque_rgb_mean": 141.6,
+    "colors": 24,
+    "changed_px": 69
+   },
+   {
+    "file": "pickup_coin_f3.png",
+    "size": [
+     16,
+     16
+    ],
+    "opaque_rgb_mean": 133.8,
+    "colors": 21,
+    "changed_px": 80
+   }
+  ],
+  "anchors": [
+   {
+    "ground_y": 557,
+    "root_x": 269.34,
+    "shift": [
+     -18,
+     -71
+    ],
+    "canvas_ground_y": 13,
+    "canvas_root_x": 8,
+    "paste": [
+     2,
+     0
+    ]
+   },
+   {
+    "ground_y": 483,
+    "root_x": 249.52,
+    "shift": [
+     2,
+     3
+    ],
+    "canvas_ground_y": 13,
+    "canvas_root_x": 8,
+    "paste": [
+     2,
+     2
+    ]
+   },
+   {
+    "ground_y": 489,
+    "root_x": 253.38,
+    "shift": [
+     -2,
+     -3
+    ],
+    "canvas_ground_y": 13,
+    "canvas_root_x": 8,
+    "paste": [
+     2,
+     2
+    ]
+   },
+   {
+    "ground_y": 467,
+    "root_x": 246.56,
+    "shift": [
+     5,
+     19
+    ],
+    "canvas_ground_y": 13,
+    "canvas_root_x": 8,
+    "paste": [
+     2,
+     2
+    ]
+   }
+  ]
+ },
+ "pickup_mushroom": {
+  "layer": "L4",
+  "kind": "pickup",
+  "size": [
+   16,
+   16
+  ],
+  "frames": 1,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false,
+  "bg": "white",
+  "frames_meta": [
+   {
+    "file": "pickup_mushroom.png",
+    "size": [
+     16,
+     16
+    ],
+    "opaque_rgb_mean": 143.5,
+    "colors": 15
+   }
+  ]
+ },
+ "fx_brick": {
+  "layer": "L3",
+  "kind": "effect",
+  "size": [
+   32,
+   32
+  ],
+  "frames": 2,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false,
+  "bg": "white",
+  "frames_meta": [
+   {
+    "file": "fx_brick_f0.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 87.6,
+    "colors": 33
+   },
+   {
+    "file": "fx_brick_f1.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 86.4,
+    "colors": 32,
+    "changed_px": 315
+   }
+  ],
+  "anchors": [
+   {
+    "ground_y": 524,
+    "root_x": 357.38,
+    "shift": [
+     0,
+     -2
+    ],
+    "canvas_ground_y": 27,
+    "canvas_root_x": 16,
+    "paste": [
+     0,
+     4
+    ]
+   },
+   {
+    "ground_y": 520,
+    "root_x": 357.17,
+    "shift": [
+     0,
+     2
+    ],
+    "canvas_ground_y": 27,
+    "canvas_root_x": 16,
+    "paste": [
+     0,
+     4
+    ]
+   }
+  ]
+ },
+ "tile_ground": {
+  "layer": "tile",
+  "kind": "tile",
+  "size": [
+   16,
+   16
+  ],
+  "frames": 1,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false,
+  "bg": "none",
+  "frames_meta": [
+   {
+    "file": "tile_ground.png",
+    "size": [
+     16,
+     16
+    ],
+    "opaque_rgb_mean": 92.0,
+    "colors": 6
+   }
+  ]
+ },
+ "tile_dirt": {
+  "layer": "tile",
+  "kind": "tile",
+  "size": [
+   16,
+   16
+  ],
+  "frames": 1,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false,
+  "bg": "none",
+  "frames_meta": [
+   {
+    "file": "tile_dirt.png",
+    "size": [
+     16,
+     16
+    ],
+    "opaque_rgb_mean": 83.8,
+    "colors": 3
+   }
+  ]
+ },
+ "tile_brick": {
+  "layer": "tile",
+  "kind": "tile",
+  "size": [
+   16,
+   16
+  ],
+  "frames": 1,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false,
+  "bg": "none",
+  "frames_meta": [
+   {
+    "file": "tile_brick.png",
+    "size": [
+     16,
+     16
+    ],
+    "opaque_rgb_mean": 112.4,
+    "colors": 3
+   }
+  ]
+ },
+ "tile_question": {
+  "layer": "tile",
+  "kind": "tile",
+  "size": [
+   16,
+   16
+  ],
+  "frames": 1,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false,
+  "bg": "none",
+  "frames_meta": [
+   {
+    "file": "tile_question.png",
+    "size": [
+     16,
+     16
+    ],
+    "opaque_rgb_mean": 163.7,
+    "colors": 3
+   }
+  ]
+ },
+ "tile_solid": {
+  "layer": "tile",
+  "kind": "tile",
+  "size": [
+   16,
+   16
+  ],
+  "frames": 1,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false,
+  "bg": "none",
+  "frames_meta": [
+   {
+    "file": "tile_solid.png",
+    "size": [
+     16,
+     16
+    ],
+    "opaque_rgb_mean": 152.5,
+    "colors": 3
+   }
+  ]
+ },
+ "ui_heart": {
+  "layer": "ui",
+  "kind": "ui",
+  "size": [
+   16,
+   16
+  ],
+  "frames": 1,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false,
+  "bg": "white",
+  "frames_meta": [
+   {
+    "file": "ui_heart.png",
+    "size": [
+     16,
+     16
+    ],
+    "opaque_rgb_mean": 78.0,
+    "colors": 6
+   }
+  ]
+ },
+ "flag_goal": {
+  "layer": "L2",
+  "kind": "sprite",
+  "size": [
+   32,
+   32
+  ],
+  "frames": 1,
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false,
+  "bg": "white",
+  "frames_meta": [
+   {
+    "file": "flag_goal.png",
+    "size": [
+     32,
+     32
+    ],
+    "opaque_rgb_mean": 99.1,
+    "colors": 8
+   }
+  ]
+ }
+}

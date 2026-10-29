@@ -1,0 +1,32 @@
+{
+ "entity": "fx_brick",
+ "style": "snes16",
+ "params": {
+  "project": ".",
+  "entity": "fx_brick",
+  "frames": "1",
+  "mode": "anchor",
+  "seed": 20261029,
+  "steps": 8,
+  "cfg": 1.0,
+  "sampler": "res_multistep",
+  "denoise": 0.45,
+  "width": 1024,
+  "height": 1024,
+  "style": null,
+  "bg": "white",
+  "negative": "",
+  "prefix": "pgp_frame",
+  "dry_run": false
+ },
+ "frames": [
+  {
+   "frame": 1,
+   "file": ".\\assets\\raw\\fx_brick\\fx_brick_f1.png",
+   "seed": 20261030,
+   "denoise": 0.45,
+   "mode": "anchor",
+   "elapsed": 13.3
+  }
+ ]
+}

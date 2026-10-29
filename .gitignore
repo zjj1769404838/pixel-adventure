@@ -1,0 +1,41 @@
+# ---- 凭据：绝不入库 ----
+.env
+.env.local
+.env.*.local
+
+# ---- 邮件发送日志（含收件人脱敏信息，但不该进仓库）----
+build/logs/
+
+# ---- 整个 build/ 都是可重建产物（exe/pck/apk/web/本地测试服务器），不入库 ----
+build/
+
+# ---- 发布产物：APK 体积大，用 Release 分发，不进仓库 ----
+dist/*.apk
+
+# ---- 签名材料：泄露等于把应用签名权交出去 ----
+*.keystore
+*.jks
+*.p12
+*.pepk
+
+# ---- Python 缓存 ----
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+
+# ---- Godot 导入缓存（体积大且可重建）----
+godot/.godot/
+godot/.import/
+
+# ---- 其它大体积构建产物（如需入库请显式 git add -f）----
+build/pixel-adventure.exe
+build/pixel-adventure.pck
+build/pixel-adventure.apk.idsig

@@ -1,0 +1,619 @@
+{
+ "project": ".",
+ "genre": "platformer",
+ "entities": {
+  "hero": {
+   "frames_expected": 4,
+   "size": [
+    32,
+    32
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "hero_f0.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 96.5,
+     "changed_px": -1,
+     "colors": 28
+    },
+    {
+     "file": "hero_f1.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 118.3,
+     "changed_px": 425,
+     "colors": 33,
+     "changed_ratio": 0.416,
+     "bbox_span": 1.0,
+     "subj_diff": 0.884,
+     "opaque_ratio": 0.443
+    },
+    {
+     "file": "hero_f2.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 98.2,
+     "changed_px": 400,
+     "colors": 31,
+     "changed_ratio": 0.405,
+     "bbox_span": 1.0,
+     "subj_diff": 0.85,
+     "opaque_ratio": 0.334
+    },
+    {
+     "file": "hero_f3.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 120.8,
+     "changed_px": 392,
+     "colors": 33,
+     "changed_ratio": 0.391,
+     "bbox_span": 1.0,
+     "subj_diff": 0.833,
+     "opaque_ratio": 0.432
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": false,
+     "subject_h": 0.595
+    },
+    {
+     "frame": 1,
+     "clipped": false,
+     "subject_h": 0.664
+    },
+    {
+     "frame": 2,
+     "clipped": false,
+     "subject_h": 0.591
+    },
+    {
+     "frame": 3,
+     "clipped": false,
+     "subject_h": 0.663
+    }
+   ],
+   "motion": {
+    "changed_ratio_avg": 0.404,
+    "bbox_span_avg": 1.0,
+    "subj_diff_avg": 0.856,
+    "opaque_ratio_avg": 0.403,
+    "palette_identity": 0.905,
+    "palette_identity_pairs": [
+     0.844,
+     0.914,
+     0.839,
+     0.915,
+     0.987,
+     0.929
+    ],
+    "subject_redraw_avg": 0.8556666666666667
+   },
+   "contact_sheet": ".\\assets\\contact_sheet\\hero.png"
+  },
+  "hero_jump": {
+   "frames_expected": 2,
+   "size": [
+    32,
+    32
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "hero_jump_f0.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 106.7,
+     "changed_px": -1,
+     "colors": 31
+    },
+    {
+     "file": "hero_jump_f1.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 95.2,
+     "changed_px": 317,
+     "colors": 31,
+     "changed_ratio": 0.312,
+     "bbox_span": 1.0,
+     "subj_diff": 0.797,
+     "opaque_ratio": 0.299
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": false,
+     "subject_h": 0.547
+    },
+    {
+     "frame": 1,
+     "clipped": false,
+     "subject_h": 0.554
+    }
+   ],
+   "motion": {
+    "changed_ratio_avg": 0.312,
+    "bbox_span_avg": 1.0,
+    "subj_diff_avg": 0.797,
+    "opaque_ratio_avg": 0.299,
+    "palette_identity": 0.916,
+    "palette_identity_pairs": [
+     0.916
+    ],
+    "subject_redraw_avg": 0.797
+   },
+   "contact_sheet": ".\\assets\\contact_sheet\\hero_jump.png"
+  },
+  "enemy_grunt": {
+   "frames_expected": 2,
+   "size": [
+    32,
+    32
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "enemy_grunt_f0.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 105.6,
+     "changed_px": -1,
+     "colors": 30
+    },
+    {
+     "file": "enemy_grunt_f1.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 109.1,
+     "changed_px": 160,
+     "colors": 27,
+     "changed_ratio": 0.256,
+     "bbox_span": 0.969,
+     "subj_diff": 0.43,
+     "opaque_ratio": 0.584
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": false,
+     "subject_h": 0.611
+    },
+    {
+     "frame": 1,
+     "clipped": false,
+     "subject_h": 0.614
+    }
+   ],
+   "motion": {
+    "changed_ratio_avg": 0.256,
+    "bbox_span_avg": 0.969,
+    "subj_diff_avg": 0.43,
+    "opaque_ratio_avg": 0.584
+   },
+   "contact_sheet": ".\\assets\\contact_sheet\\enemy_grunt.png"
+  },
+  "enemy_flyer": {
+   "frames_expected": 2,
+   "size": [
+    32,
+    32
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "enemy_flyer_f0.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 136.3,
+     "changed_px": -1,
+     "colors": 30
+    },
+    {
+     "file": "enemy_flyer_f1.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 137.4,
+     "changed_px": 55,
+     "colors": 26,
+     "changed_ratio": 0.162,
+     "bbox_span": 1.0,
+     "subj_diff": 0.525,
+     "opaque_ratio": 0.304
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": false,
+     "subject_h": 0.539
+    },
+    {
+     "frame": 1,
+     "clipped": false,
+     "subject_h": 0.539
+    }
+   ],
+   "motion": {
+    "changed_ratio_avg": 0.162,
+    "bbox_span_avg": 1.0,
+    "subj_diff_avg": 0.525,
+    "opaque_ratio_avg": 0.304
+   },
+   "contact_sheet": ".\\assets\\contact_sheet\\enemy_flyer.png"
+  },
+  "pickup_coin": {
+   "frames_expected": 4,
+   "size": [
+    16,
+    16
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "pickup_coin_f0.png",
+     "size": [
+      16,
+      16
+     ],
+     "opaque_rgb_mean": 151.9,
+     "changed_px": -1,
+     "colors": 25
+    },
+    {
+     "file": "pickup_coin_f1.png",
+     "size": [
+      16,
+      16
+     ],
+     "opaque_rgb_mean": 137.1,
+     "changed_px": 155,
+     "colors": 26,
+     "changed_ratio": 0.605,
+     "bbox_span": 1.0,
+     "subj_diff": 0.945,
+     "opaque_ratio": 0.477
+    },
+    {
+     "file": "pickup_coin_f2.png",
+     "size": [
+      16,
+      16
+     ],
+     "opaque_rgb_mean": 141.6,
+     "changed_px": 69,
+     "colors": 24,
+     "changed_ratio": 0.27,
+     "bbox_span": 0.875,
+     "subj_diff": 0.561,
+     "opaque_ratio": 0.477
+    },
+    {
+     "file": "pickup_coin_f3.png",
+     "size": [
+      16,
+      16
+     ],
+     "opaque_rgb_mean": 133.8,
+     "changed_px": 80,
+     "colors": 21,
+     "changed_ratio": 0.312,
+     "bbox_span": 0.875,
+     "subj_diff": 0.645,
+     "opaque_ratio": 0.469
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": false,
+     "subject_h": 0.545
+    },
+    {
+     "frame": 1,
+     "clipped": false,
+     "subject_h": 0.473
+    },
+    {
+     "frame": 2,
+     "clipped": false,
+     "subject_h": 0.477
+    },
+    {
+     "frame": 3,
+     "clipped": false,
+     "subject_h": 0.455
+    }
+   ],
+   "motion": {
+    "changed_ratio_avg": 0.396,
+    "bbox_span_avg": 0.917,
+    "subj_diff_avg": 0.717,
+    "opaque_ratio_avg": 0.474
+   },
+   "contact_sheet": ".\\assets\\contact_sheet\\pickup_coin.png"
+  },
+  "pickup_mushroom": {
+   "frames_expected": 1,
+   "size": [
+    16,
+    16
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "pickup_mushroom.png",
+     "size": [
+      16,
+      16
+     ],
+     "opaque_rgb_mean": 143.5,
+     "changed_px": -1,
+     "colors": 15
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": false,
+     "subject_h": 0.582
+    }
+   ]
+  },
+  "fx_brick": {
+   "frames_expected": 2,
+   "size": [
+    32,
+    32
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "fx_brick_f0.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 87.6,
+     "changed_px": -1,
+     "colors": 33
+    },
+    {
+     "file": "fx_brick_f1.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 86.4,
+     "changed_px": 315,
+     "colors": 32,
+     "changed_ratio": 0.348,
+     "bbox_span": 1.0,
+     "subj_diff": 0.689,
+     "opaque_ratio": 0.498
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": false,
+     "subject_h": 0.51
+    },
+    {
+     "frame": 1,
+     "clipped": false,
+     "subject_h": 0.51
+    }
+   ],
+   "motion": {
+    "changed_ratio_avg": 0.348,
+    "bbox_span_avg": 1.0,
+    "subj_diff_avg": 0.689,
+    "opaque_ratio_avg": 0.498
+   },
+   "contact_sheet": ".\\assets\\contact_sheet\\fx_brick.png"
+  },
+  "tile_ground": {
+   "frames_expected": 1,
+   "size": [
+    16,
+    16
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "tile_ground.png",
+     "size": [
+      16,
+      16
+     ],
+     "opaque_rgb_mean": 92.0,
+     "changed_px": -1,
+     "colors": 6
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": true,
+     "subject_h": 1.0
+    }
+   ]
+  },
+  "tile_brick": {
+   "frames_expected": 1,
+   "size": [
+    16,
+    16
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "tile_brick.png",
+     "size": [
+      16,
+      16
+     ],
+     "opaque_rgb_mean": 112.4,
+     "changed_px": -1,
+     "colors": 3
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": true,
+     "subject_h": 1.0
+    }
+   ]
+  },
+  "tile_question": {
+   "frames_expected": 1,
+   "size": [
+    16,
+    16
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "tile_question.png",
+     "size": [
+      16,
+      16
+     ],
+     "opaque_rgb_mean": 163.7,
+     "changed_px": -1,
+     "colors": 3
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": true,
+     "subject_h": 1.0
+    }
+   ]
+  },
+  "tile_solid": {
+   "frames_expected": 1,
+   "size": [
+    16,
+    16
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "tile_solid.png",
+     "size": [
+      16,
+      16
+     ],
+     "opaque_rgb_mean": 152.5,
+     "changed_px": -1,
+     "colors": 3
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": true,
+     "subject_h": 1.0
+    }
+   ]
+  },
+  "ui_heart": {
+   "frames_expected": 1,
+   "size": [
+    16,
+    16
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "ui_heart.png",
+     "size": [
+      16,
+      16
+     ],
+     "opaque_rgb_mean": 78.0,
+     "changed_px": -1,
+     "colors": 6
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": false,
+     "subject_h": 0.549
+    }
+   ]
+  },
+  "flag_goal": {
+   "frames_expected": 1,
+   "size": [
+    32,
+    32
+   ],
+   "problems": [],
+   "warn": [],
+   "frames": [
+    {
+     "file": "flag_goal.png",
+     "size": [
+      32,
+      32
+     ],
+     "opaque_rgb_mean": 99.1,
+     "changed_px": -1,
+     "colors": 8
+    }
+   ],
+   "raw_edge": [
+    {
+     "frame": 0,
+     "clipped": false,
+     "subject_h": 0.766
+    }
+   ]
+  }
+ },
+ "fail": [],
+ "warn": []
+}

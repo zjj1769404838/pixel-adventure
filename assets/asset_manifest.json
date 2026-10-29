@@ -1,0 +1,250 @@
+[
+ {
+  "name": "hero",
+  "desc": "a small brave pixel-art boy adventurer with a red cap, tan face, blue overalls and brown boots, side view facing right, full body",
+  "prompt": "a small brave pixel-art boy adventurer with a red cap, tan face, blue overalls and brown boots, side view facing right, full body, one single character",
+  "palette_desc": "limited palette of red cap, tan face, blue overalls, brown boots, white gloves, black outline",
+  "pose": "side view facing right, upright standing pose, arms at sides, knees slightly bent, game-ready pose",
+  "frames": 4,
+  "frame_hints": [
+   "standing still, both feet flat on the ground, arms relaxed at sides",
+   "running, front leg stretched forward, back leg bent behind, one arm swung forward",
+   "running, legs together in mid stride, body lifted slightly off the ground",
+   "running, back leg stretched forward, front leg bent behind, opposite arm swung forward"
+  ],
+  "kind": "sprite",
+  "layer": "L1",
+  "size": 32,
+  "bg": "white",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": true
+ },
+ {
+  "name": "hero_jump",
+  "desc": "the same small brave pixel-art boy adventurer with a red cap, tan face, blue overalls and brown boots, side view facing right, full body",
+  "prompt": "the same small brave pixel-art boy adventurer with a red cap, tan face, blue overalls and brown boots, side view facing right, full body, one single character",
+  "palette_desc": "limited palette of red cap, tan face, blue overalls, brown boots, white gloves, black outline",
+  "pose": "side view facing right, upright standing pose, arms at sides, knees slightly bent, game-ready pose",
+  "frames": 2,
+  "frame_hints": [
+   "jumping upward, both knees tucked up toward the chest, both arms raised above the head",
+   "falling downward, both legs stretched down and apart, both arms spread out to the sides"
+  ],
+  "kind": "sprite",
+  "layer": "L1",
+  "size": 32,
+  "bg": "white",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": true
+ },
+ {
+  "name": "enemy_grunt",
+  "desc": "a small angry brown mushroom-shaped walking enemy with two dark eyes and tiny feet, side view facing left, full body",
+  "prompt": "a small angry brown mushroom-shaped walking enemy with two dark eyes and tiny feet, side view facing left, full body, one single creature",
+  "palette_desc": "limited palette of warm brown cap, tan face, dark brown feet, black eyes, black outline",
+  "pose": "side view facing left, hunched standing pose, arms at sides, game-ready pose",
+  "frames": 2,
+  "frame_hints": [
+   "standing with feet apart on the ground, eyes looking forward",
+   "walking with the near foot raised off the ground, body bobbing slightly"
+  ],
+  "kind": "sprite",
+  "layer": "L1",
+  "size": 32,
+  "bg": "white",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": true
+ },
+ {
+  "name": "enemy_flyer",
+  "desc": "a small round purple flying creature with stubby wings and a single big eye, side view facing left, full body",
+  "prompt": "a small round purple flying creature with stubby wings and a single big eye, side view facing left, full body, one single creature",
+  "palette_desc": "limited palette of violet body, light lilac belly, magenta wings, white eye, black outline",
+  "pose": "side view facing left, hovering pose with wings spread, game-ready pose",
+  "frames": 2,
+  "frame_hints": [
+   "hovering with both wings spread straight out to the sides",
+   "hovering with both wings raised up above the body"
+  ],
+  "kind": "sprite",
+  "layer": "L1",
+  "size": 32,
+  "bg": "white",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": true
+ },
+ {
+  "name": "pickup_coin",
+  "desc": "a shiny round gold coin with a star stamped in the middle, single collectible item",
+  "prompt": "a shiny round gold coin with a star stamped in the middle, one single collectible game item",
+  "palette_desc": "limited palette of bright gold, pale yellow highlight, dark orange shadow, black outline",
+  "pose": "floating slightly, tilted 15 degrees, centered",
+  "frames": 4,
+  "frame_hints": [
+   "coin seen face on, a full round circle",
+   "coin rotated, a narrower oval",
+   "coin seen edge on, a very thin vertical sliver",
+   "coin rotated the other way, a narrower oval"
+  ],
+  "kind": "pickup",
+  "layer": "L4",
+  "size": 16,
+  "bg": "white",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": true
+ },
+ {
+  "name": "pickup_mushroom",
+  "desc": "a friendly power-up mushroom with a red cap covered in white spots and a cream stem, single collectible item",
+  "prompt": "a friendly power-up mushroom with a red cap covered in white spots and a cream stem, one single collectible game item",
+  "palette_desc": "limited palette of bright red cap, white spots, cream stem, dark brown outline",
+  "pose": "floating slightly, tilted 15 degrees, centered",
+  "frames": 1,
+  "kind": "pickup",
+  "layer": "L4",
+  "size": 16,
+  "bg": "white",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false
+ },
+ {
+  "name": "fx_brick",
+  "desc": "a burst of small broken brick shards with dust, game impact effect",
+  "prompt": "a burst of small broken brick shards with dust, one single game impact effect burst",
+  "palette_desc": "limited palette of brick orange, tan dust, dark brown shard shadow, black outline",
+  "pose": "centered, filling 80% of frame, no perspective, straight-on view",
+  "frames": 2,
+  "frame_hints": [
+   "a tight cluster of brick shards just breaking apart",
+   "the brick shards spreading further apart with a puff of dust"
+  ],
+  "kind": "effect",
+  "layer": "L3",
+  "size": 32,
+  "bg": "white",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false
+ },
+ {
+  "name": "tile_ground",
+  "desc": "solid ground block tile, flat top view, seamless tiling",
+  "prompt": "solid ground block tile, flat top view, seamless tiling",
+  "kind": "tile",
+  "layer": "tile",
+  "size": 16,
+  "bg": "none",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false
+ },
+ {
+  "name": "tile_dirt",
+  "desc": "underground dirt block tile, flat top view, seamless tiling",
+  "prompt": "underground dirt block tile, flat top view, seamless tiling",
+  "kind": "tile",
+  "layer": "tile",
+  "size": 16,
+  "bg": "none",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false
+ },
+ {
+  "name": "tile_brick",
+  "desc": "orange brick block tile, flat top view, seamless tiling",
+  "prompt": "orange brick block tile, flat top view, seamless tiling",
+  "kind": "tile",
+  "layer": "tile",
+  "size": 16,
+  "bg": "none",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false
+ },
+ {
+  "name": "tile_question",
+  "desc": "golden question mark block tile, flat top view, seamless tiling",
+  "prompt": "golden question mark block tile, flat top view, seamless tiling",
+  "kind": "tile",
+  "layer": "tile",
+  "size": 16,
+  "bg": "none",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false
+ },
+ {
+  "name": "tile_solid",
+  "desc": "grey stone block tile, flat top view, seamless tiling",
+  "prompt": "grey stone block tile, flat top view, seamless tiling",
+  "kind": "tile",
+  "layer": "tile",
+  "size": 16,
+  "bg": "none",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false
+ },
+ {
+  "name": "ui_heart",
+  "desc": "red heart life icon",
+  "prompt": "red heart life icon, one single game ui icon",
+  "kind": "ui",
+  "layer": "ui",
+  "size": 16,
+  "bg": "white",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false
+ },
+ {
+  "name": "flag_goal",
+  "desc": "a red triangular victory flag on a short grey pole, single goal marker",
+  "prompt": "a red triangular victory flag on a short grey pole, one single game goal marker object",
+  "palette_desc": "limited palette of bright red flag, white star, grey pole, black outline",
+  "pose": "standing upright, flag waving to the right, centered",
+  "frames": 1,
+  "kind": "sprite",
+  "layer": "L2",
+  "size": 32,
+  "bg": "white",
+  "anchor": [
+   0.5,
+   0.5
+  ],
+  "loop": false
+ }
+]
