@@ -144,15 +144,40 @@ Godot 运行期**读不到 `export_presets.cfg`**，所以版本号走一个独�
 
 `ota_installer.gd` 按顺序尝试，任一成功即止：
 
-1. **PLUGIN**：`Engine.has_singleton("OtaInstaller")`。真正的 FileProvider 安装需要 Java 侧插件，
-   本工程**未内置**，所以这条通常是空的——这是已知限制，不是 bug。
+1. **PLUGIN**：`Engine.has_singleton("OtaInstaller")`。**本工程已内置该 Android 插件**
+   （`godot/android/build/src/main/java/com/godot/game/OtaInstaller.java`），走
+   `FileProvider.getUriForFile()` → `content://` URI → `ACTION_VIEW` 直接调起系统安装器，
+   **不跳浏览器、不落地「手动下载」**。
 2. **AM_INTENT**：`am start -a android.intent.action.VIEW -d file://… -t application/vnd.android.package-archive -f 0x10000001`。
-   在没有插件的情况下，多数定制 ROM 会拒绝 `file://`（`FileUriExposedException`），此时落到第 3 步。
+   插件缺失时的兜底。多数定制 ROM 会拒绝 `file://`（`FileUriExposedException`），此时落到第 3 步。
 3. **BROWSER**：`OS.shell_open(release_page)`，让用户在浏览器里手动下载安装。
-   **这是当前工程在真机上的实际路径**，弹窗里「手动下载」按钮走的也是它。
+   **这是非 Android 平台（或插件彻底不可用）时的兜底路径**，弹窗里「手动下载」按钮走的也是它。
 
-因此「检测 → 下载 → 校验」全自动，「安装」一步在无插件时是**半自动**：跳到发布页由用户完成。
-要变成全自动，需要补一个 Android 插件（`FileProvider` + `ACTION_INSTALL_PACKAGE` Intent）。
+「检测 → 下载 → 校验 → 唤起安装器」在 Android 上已全自动化；最后一步系统安装界面仍需用户点确认
+（普通 APK 无法静默安装，见已知限制第 1 条）。
+
+**FileProvider 从哪来**：Godot 的 `godot-lib` aar **本身已经带了一个 FileProvider**
+（authority `${applicationId}.fileprovider`，meta-data 指向 `@xml/godot_provider_paths`，
+其中 `files-path path="/"`）。因此工程**不需要自定义 provider，也不需要自己写 paths xml**，
+只要不要重复声明同名 provider，否则 AGP manifest merger 会因
+`meta-data#android.support.FILE_PROVIDER_PATHS` 冲突而失败（实测报
+`Manifest merger failed ... also present at [godot-lib.template_debug.aar]`）。
+
+**下载目录必须落在 provider 授权范围内**：OTA 下载目录是 `user://ota`
+（`godot/scripts/ota/ota_downloader.gd:33`），在 Android 上即
+`/data/data/com.pixelstudio.pixeladventure/files/ota`，正好被 `files-path path="/"` 覆盖，
+所以 `FileProvider.getUriForFile()` 能直接授权，无需额外配置。
+
+**未知来源安装权限**：插件在 API ≥ 26 且 `!canRequestPackageInstalls()` 时返回码 `2`，
+客户端弹窗改为「去授权 / 立即安装 / 稍后安装」，「去授权」调用插件的
+`openInstallPermissionSettings()` 跳系统「允许安装未知应用」页面。
+
+**自定义 Android 构建模板**（启用 Gradle 构建所必需）：工程内 `godot/android/` 是从
+`%APPDATA%\Godot\export_templates\4.7.2.stable/android_source.zip` 解出的模板，
+放在 `godot/android/build/`，父目录 `godot/android/.build_version` 写 `4.7.2.stable`。
+Godot 导出时的两条硬校验：`get_android_build_directory()` 必须存在 `build.gradle`；
+`.build_version` 内容必须与 `get_android_template_identifier()` 逐字相同
+（即 `4.7.2.stable`，改版本号就得同步改这里）。
 
 ### 2.5.4 异常与提示文案对照
 
@@ -514,7 +539,7 @@ SHA-256 只保证「文件与清单一致」，不保证「清单是真的」。
 
 1. **没有真正的自动更新**。游戏只负责「检查 + 下载 + 校验 + 唤起安装器」，安装动作由系统完成，
    用户仍需点确认。要实现静默更新需要系统级权限（如设备管理员 / 系统应用），普通 APK 做不到。
-   本工程在无插件时连「唤起安装器」都会退化为跳发布页（见 2.5.3）。
+   本工程已内置 FileProvider 插件，Android 上会直接调起系统安装器（非 Android 平台才降级为跳发布页，见 2.5.3）。
 2. **清单无签名，信任锚是 HTTPS**。如 5.3 所述，清单被替换时 SHA-256 校验无效。签名清单尚未实现。
 3. **`history` 只是记录，不参与逻辑**。回滚需要人工改清单（把旧版本重新写进 `latest`），
    没有自动回滚机制，也没有灰度/分批发布。
@@ -532,7 +557,9 @@ SHA-256 只保证「文件与清单一致」，不保证「清单是真的」。
     OTA 侧则**已覆盖真实 HTTP**：`godot/ota_test.gd` 打本地 `127.0.0.1:8791` 真发请求、真落盘、真算 SHA-256。
 11. **未在真机验证安装跳转**。本机无模拟器、`adb devices` 为空，所以「下载 → 校验」在桌面端实测通过，
     「唤起系统安装器」这一步只能靠代码路径与错误文案覆盖，未做过真机点击验证。
-12. **未内置 FileProvider 插件**。见 2.5.3：真机上会落到「跳浏览器手动下载」，
-    要全自动安装必须补 Android 插件（`FileProvider` + `ACTION_INSTALL_PACKAGE`），本工程未做。
+12. **FileProvider 来自 `godot-lib` 而非自建**。工程不声明自定义 provider，直接复用 godot-lib 自带的
+    `${applicationId}.fileprovider`（其 `files-path path="/"` 已覆盖 `user://ota`）。
+    代价是这套能力**绑定 Godot 版本**——若将来换 Godot 版本或换引擎，需重新确认 aar 里是否仍带 FileProvider，
+    否则要自己声明 provider 并给同名 meta-data 加 `tools:replace="android:resource"`。
 13. **`ota_config.json` 的 `manifest_url` 默认是空串**。这是刻意的安全默认值：不填就不联网检查。
     正式发布必须把它改成真实 HTTPS 清单地址并重新出包。

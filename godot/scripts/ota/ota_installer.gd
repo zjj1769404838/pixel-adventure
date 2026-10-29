@@ -147,6 +147,20 @@ static func _install_via_browser(fallback_url: String) -> int:
 	return Result.NO_INSTALLER
 
 
+## 打开系统的「安装未知应用」授权页（需要插件支持）。
+## Android 8.0 起安装 APK 必须由用户给本应用授权，否则 startActivity 会被系统拦。
+## 返回 true 表示已成功拉起授权页。
+static func open_permission_settings() -> bool:
+	if not Engine.has_singleton(PLUGIN_NAME):
+		return false
+	var plugin: Object = Engine.get_singleton(PLUGIN_NAME)
+	if plugin == null or not plugin.has_method("openInstallPermissionSettings"):
+		return false
+	var ret: Variant = plugin.call("openInstallPermissionSettings")
+	OtaLog.write("permission_settings_opened", {"ok": int(ret) == 0})
+	return int(ret) == 0
+
+
 ## 给界面用的人类可读文案
 static func result_text(code: int) -> String:
 	match code:

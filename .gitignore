@@ -9,8 +9,9 @@
 # ---- 邮件发送日志（含收件人脱敏信息，但不该进仓库）----
 build/logs/
 
-# ---- 整个 build/ 都是可重建产物（exe/pck/apk/web/本地测试服务器），不入库 ----
-build/
+# ---- 工程根 build/ 是可重建产物（exe/pck/apk/web/本地测试服务器），不入库 ----
+# 注意：必须写成 /build/ 锚定根目录，否则会连带忽略 godot/android/build/ 模板骨架
+/build/
 
 # ---- 发布产物：APK 体积大，用 Release 分发，不进仓库 ----
 dist/*.apk
@@ -37,6 +38,29 @@ desktop.ini
 # ---- Godot 导入缓存（体积大且可重建）----
 godot/.godot/
 godot/.import/
+
+# ---- Android 自定义 Gradle 构建模板（godot/android/）----
+# 入库：模板骨架（build.gradle/config.gradle/settings.gradle/gradlew/gradle/）
+#       + 我们改的 src/main/{AndroidManifest.xml,java/} + res/xml/ + .build_version
+# 不入库：预编译 aar（112MB/103MB，GitHub 单文件上限 100MB）、gradle 输出与缓存、
+#         Godot 导出时写入的 assets 与 src/debug 生成的 manifest
+godot/android/libs/
+godot/android/.gradle/
+godot/android/captures/
+godot/android/local.properties
+godot/android/.cxx/
+godot/android/build/build/
+godot/android/build/libs/
+godot/android/build/src/release/
+godot/android/build/.gdignore
+godot/android/build/.gradle/
+godot/android/build/captures/
+godot/android/build/local.properties
+godot/android/build/.cxx/
+godot/android/build/src/main/assets/
+godot/android/build/src/debug/
+godot/android/build/src/instrumented/assets/
+godot/android/build/assetPackInstallTime/build/
 
 # ---- 其它大体积构建产物（如需入库请显式 git add -f）----
 build/pixel-adventure.exe

@@ -3,19 +3,20 @@
   "game": "像素冒险",
   "package": "com.pixelstudio.pixeladventure",
   "latest": {
-    "version_name": "1.0.1",
-    "version_code": 2,
-    "published_at": "2026-10-29T14:00:00Z",
-    "size_bytes": 30387938,
-    "sha256": "5fc68f002d5011a77002e782189e2724a7da11180c178a49cd71caa976ff84cf",
+    "version_name": "1.0.2",
+    "version_code": 3,
+    "published_at": "2026-10-29T16:45:00Z",
+    "size_bytes": 28608476,
+    "sha256": "62bc3d240d4c5cd9acfee8d16fe57d6c96ebdb8a8f8ace79307d55a49cd3111c",
     "min_supported_version_code": 1,
     "mandatory": false,
     "changelog": [
-      "新增应用内 OTA 更新：启动检查、下载、SHA-256 校验、安装跳转",
-      "新增 U 键手动检查更新入口与 OTA 日志"
+      "应用内 OTA 更新：下载完成后直接调起系统安装器，不再跳转浏览器",
+      "内置 FileProvider 与 OtaInstaller 插件，支持未知来源安装授权引导",
+      "启用 native 库压缩，安装包体积从 76.6 MB 降至 28.6 MB"
     ],
-    "download_url": "https://github.com/zjj1769404838/pixel-adventure/releases/download/v1.0.1/pixel-adventure-1.0.1.apk",
-    "release_page": "https://github.com/zjj1769404838/pixel-adventure/releases/tag/v1.0.1"
+    "download_url": "https://github.com/zjj1769404838/pixel-adventure/releases/download/v1.0.2/pixel-adventure-1.0.2.apk",
+    "release_page": "https://github.com/zjj1769404838/pixel-adventure/releases/tag/v1.0.2"
   },
   "history": []
 }

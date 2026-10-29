@@ -11,3 +11,4 @@
 | S5 测试（像素验收 + 无头冒烟） | [x] | docs/asset_report.json、godot/smoke_test.gd（44 项 PASS） | 2026-10-29 |
 | S6 交付（Windows + Web + Android APK + 复盘） | [x] | build/pixel-adventure.exe、build/web/index.html、build/pixel-adventure.apk、docs/shots/*.png | 2026-10-29 |
 | S7 OTA 更新（客户端检查/下载/校验/安装跳转 + 发布工具链 + 邮件） | [x] | godot/scripts/ota/*.gd（10 文件）、scripts/{release_manifest,publish_release,send_release_email}.py、docs/OTA.md（522 行）、dist/latest.json、.env.example | 2026-10-29 |
+| S8 应用内安装（自定义 Android 模板 + FileProvider 插件 + 未知来源授权） | [x] | godot/android/（模板 build/ + .build_version + OtaInstaller.java）、godot/scripts/ota/ota_installer.gd（去授权）、docs/OTA.md §2.5.3 | 2026-10-29 |

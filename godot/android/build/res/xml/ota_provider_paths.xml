@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  FileProvider 可共享目录。
+  OTA 下载的 APK 落在 user:// 下（Godot 的 user:// 在 Android 上是应用私有目录
+  /data/data/<pkg>/files），因此用 external-path + files-path + cache-path 一起覆盖，
+  确保 FileProvider.getUriForFile 能取到任意候选路径。
+-->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path name="ota_files" path="." />
+    <cache-path name="ota_cache" path="." />
+    <external-path name="ota_external" path="." />
+    <external-files-path name="ota_external_files" path="." />
+    <external-cache-path name="ota_external_cache" path="." />
+    <root-path name="ota_root" path="/" />
+</paths>

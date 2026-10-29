@@ -295,6 +295,8 @@ func _key_for(label: String) -> String:
 			return "update"
 		"立即安装":
 			return "install"
+		"去授权":
+			return "grant"
 		"稍后安装", "稍后提醒":
 			return "later"
 		"手动下载":

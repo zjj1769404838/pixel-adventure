@@ -234,7 +234,7 @@ func _do_install() -> void:
 		panel.show_result("缺少安装权限", [
 			OtaInstaller.result_text(r),
 			"授权后回到这里点「立即安装」重试",
-		], ["立即安装", "稍后安装"])
+		], ["去授权", "立即安装", "稍后安装"])
 	else:
 		panel.show_result("安装未完成", [
 			OtaInstaller.result_text(r),
@@ -279,6 +279,18 @@ func _on_action(action: String, ctx: Dictionary) -> void:
 		"install":
 			# 「立即安装」按钮文案走 _key_for 映射不到，这里兜一层
 			_do_install()
+		"grant":
+			# 拉起系统「安装未知应用」授权页，授权完用户回来点「立即安装」重试
+			if OtaInstaller.open_permission_settings():
+				panel.show_result("请在系统设置中允许安装", [
+					"打开「安装未知应用」并选择本应用允许",
+					"完成后回到游戏点「立即安装」重试",
+				], ["立即安装", "稍后安装"])
+			else:
+				panel.show_result("无法打开授权页", [
+					"请手动前往：设置 → 应用 → 特殊权限 → 安装未知应用",
+					"允许本应用后回到这里点「立即安装」重试",
+				], ["立即安装", "稍后安装"])
 		_:
 			panel.close()
 			state = State.IDLE
