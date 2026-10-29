@@ -1,5 +1,5 @@
 {
-  "manifest_url": "",
+  "manifest_url": "https://raw.githubusercontent.com/zjj1769404838/pixel-adventure/main/dist/latest.json",
   "install_authority": "com.pixelstudio.pixeladventure.fileprovider",
   "check_on_start": true,
   "timeout_sec": 10.0,

@@ -7,15 +7,15 @@
     "version_code": 2,
     "published_at": "2026-10-29T14:00:00Z",
     "size_bytes": 30387938,
-    "sha256": "67accaf711cbb904ad357ad97f37239ee7341e9f354b68dfc74baf9b3065f3de",
+    "sha256": "5fc68f002d5011a77002e782189e2724a7da11180c178a49cd71caa976ff84cf",
     "min_supported_version_code": 1,
     "mandatory": false,
     "changelog": [
       "新增应用内 OTA 更新：启动检查、下载、SHA-256 校验、安装跳转",
-      "新增 U 键手动检查更新入口"
+      "新增 U 键手动检查更新入口与 OTA 日志"
     ],
-    "download_url": "https://github.com/owner/repo/releases/download/v1.0.1/pixel-adventure-1.0.1.apk",
-    "release_page": "https://github.com/owner/repo/releases/tag/v1.0.1"
+    "download_url": "https://github.com/zjj1769404838/pixel-adventure/releases/download/v1.0.1/pixel-adventure-1.0.1.apk",
+    "release_page": "https://github.com/zjj1769404838/pixel-adventure/releases/tag/v1.0.1"
   },
   "history": []
 }
